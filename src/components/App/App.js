@@ -14,14 +14,19 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    getMovieData('https://swapi.co/api/films/1/')
-    .then(data => this.setState({ movie : data }))
+    // getMovieData('https://swapi.co/api/films/1/')
+    // .then(data => this.setState({ movie : data }))
+  }
+
+  selectMovie = (movie) => {
+    getMovieData(movie)
+    .then(data => console.log(data))
   }
 
   render() {
     return (
       <section className="App">
-        <MoviesContainer />
+        <MoviesContainer selectMovie={this.selectMovie} />
       </section>
     );
   }
