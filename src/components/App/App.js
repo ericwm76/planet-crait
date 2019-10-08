@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getMovieData } from '../../apiCalls';
+import MoviesContainer from '../MoviesContainer/MoviesContainer';
 
 
 
@@ -12,7 +13,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount= () => {
+  componentDidMount = () => {
     getMovieData('https://swapi.co/api/films/1/')
     .then(data => this.setState({ movie : data }))
   }
@@ -20,8 +21,7 @@ class App extends Component {
   render() {
     return (
       <section className="App">
-         <h2>Episode {this.state.movie.episode_id}: {this.state.movie.title}</h2>
-         <h3>{ this.state.movie.release_date && this.state.movie.release_date.split('-')[0]}</h3>
+        <MoviesContainer />
       </section>
     );
   }
