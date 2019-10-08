@@ -3,7 +3,7 @@
 ...
 
 ## Created by:
-[Amanda Consuelo Sierra](https://github.com/Asilo5)
+[Amanda Consuelo Sierra](https://github.com/Asilo5),
 [Eric Meldrum](https://github.com/ericwm76)
 
 ## View Planet Crait locally in your computer
