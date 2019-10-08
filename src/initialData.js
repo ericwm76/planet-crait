@@ -1,23 +1,5 @@
 const initialMovies = [
   {
-  url: "https://swapi.co/api/films/1/",
-  episode_id: 4,
-  title: "A New Hope",
-  release_date: "1977"
-  },
-  {
-    url: "https://swapi.co/api/films/2/",
-    episode_id: 5,
-    title: "The Empire Strikes Back",
-    release_date: "1980"
-  },
-  {
-    url: "https://swapi.co/api/films/3/",
-    episode_id: 6,
-    title: "Return of the Jedi",
-    release_date: "1983"
-  },
-  {
     url: "https://swapi.co/api/films/4/",
     episode_id: 1,
     title: "The Phantom Menace",
@@ -35,6 +17,24 @@ const initialMovies = [
     title: "Revenge of the Sith",
     release_date: "2005"
   },
+  {
+    url: "https://swapi.co/api/films/1/",
+    episode_id: 4,
+    title: "A New Hope",
+    release_date: "1977"
+    },
+    {
+      url: "https://swapi.co/api/films/2/",
+      episode_id: 5,
+      title: "The Empire Strikes Back",
+      release_date: "1980"
+    },
+    {
+      url: "https://swapi.co/api/films/3/",
+      episode_id: 6,
+      title: "Return of the Jedi",
+      release_date: "1983"
+    },
   {
     url: "https://swapi.co/api/films/7/",
     episode_id: 7,
