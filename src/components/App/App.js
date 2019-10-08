@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getMovieData } from '../../apiCalls';
-import initialMovies from '../../initialData';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 
 

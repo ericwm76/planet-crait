@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './MoviesContainer.scss';
 import initialMovies from '../../initialData';
 import Movie from '../Movie/Movie'
 
-const MoviesContainer = (props) => {
-  const movieCards = () => {
-    return initialMovies.map(movie => {
+const MoviesContainer = () => {
+  const movieCards = initialMovies.map(movie => {
       return (<Movie 
         key={movie.episode_id} 
         id={movie.episode_id} 
@@ -14,7 +13,6 @@ const MoviesContainer = (props) => {
         />
       )
     })
-  }
 
   return (
     <div>
