@@ -9,10 +9,9 @@ export const getMovieData = (movieUrl) => {
        return fetch(characterUrl)
          .then(response => response.json())
          .then(characterObj => {
-            const { name, homeworld, species, films} = characterObj;
-            console.log(name)
-               return getHomeworld(homeworld)
-               .then(data => ({data, name, species, films}));
+            const { name, homeworld, species, films } = characterObj;
+            return getHomeworld(homeworld)
+               .then(worldObj => ({name, species, films, homeWorldName: worldObj.name, homeWorldPop: worldObj.population}))
             // Promise.all(characterInfo);
          })
          // .then(characterData => characterData);
@@ -21,8 +20,8 @@ export const getMovieData = (movieUrl) => {
    return Promise.all(char);
 }
 
-const getHomeworld = (world) => {
-   return fetch(world)
+const getHomeworld = (worldUrl) => {
+   return fetch(worldUrl)
    .then(response => response.json())
-   .then(homeWorld => homeWorld);
+   .then(homeWorld => ({ name: homeWorld.name, population: homeWorld.population }));
 }
