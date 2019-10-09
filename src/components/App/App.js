@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { getMovieData, getCharacters } from '../../apiCalls';
-import MoviesContainer from '../MoviesContainer/MoviesContainer';
 
+import MoviesContainer from '../MoviesContainer/MoviesContainer';
+import LandingPage from '../LandingPage/LandingPage';
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <section className="App">
+        <LandingPage />
         <MoviesContainer selectMovie={this.selectMovie} />
       </section>
     );

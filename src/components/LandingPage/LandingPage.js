@@ -1,0 +1,44 @@
+import React, { Component } from 'react';
+import './LandingPage.scss';
+
+class LandingPage extends Component {
+    constructor() {
+      super();
+      this.state = {
+        name: '',
+        quote: ''
+      }
+    }
+
+    render() {
+        return(
+            <section className='landing-page'>
+                <div className='form-section'>
+                  <h2 className='welcome-crait'>Welcome to Planet Crait</h2>
+                  <form className='landing-form'>
+                    <input className='name-input' 
+                         type='text'
+                         placeholder='Name of Jedi'
+                         name='name'
+                         value={this.state.name} />
+                    <input className='quote-input' 
+                         type='text'
+                         placeholder='Your favourite Star Wars quote here'
+                         name='quote'
+                         value={this.state.title} />
+                    <div className='fandom-level-btns'>
+                      <button className='novice-btn btn'>Novice</button>
+                      <button className='intermediate-btn btn'>Intermediate</button>
+                      <button className='expert-btn btn'>Expert</button>
+                    </div>
+ 
+                    <button className='submit-btn' >Do. Or do not. Submit</button>
+                  </form>
+                </div>
+            </section>
+        )
+    }
+
+}
+
+export default LandingPage;

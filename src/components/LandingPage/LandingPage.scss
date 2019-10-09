@@ -1,0 +1,79 @@
+$crait-color : #c0392b;
+$novice-color : blue;
+$intermediate-color : green;
+$expert-color : purple;
+$hover-text-color: white;
+$landing-form-color: #ffffffa6;
+
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://media.giphy.com/media/nEfs1tRuKsXxm/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $landing-form-color;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.landing-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.name-input,
+.quote-input {
+  font-size: 2em;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  width: 110%;
+}
+
+.submit-btn {
+  font-size: 2em;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  &:hover {
+    background: $crait-color;
+    color: $hover-text-color;
+  }
+}
+
+.btn {
+  @extend .submit-btn;
+  font-size: 24px;
+}
+
+.novice-btn:hover {
+  background: $novice-color;
+}
+
+.intermediate-btn:hover {
+    background: $intermediate-color;
+  }
+
+.expert-btn:hover {
+    background: $expert-color;
+  }
+
+.welcome-crait {
+  color: $crait-color;
+  font-size: 5em;
+  margin: 20px;
+}
+
