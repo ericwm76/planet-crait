@@ -23,14 +23,14 @@ class LandingPage extends Component {
                          type='text'
                          placeholder='Your favourite Star Wars quote here'
                          name='quote'
-                         value={this.state.title} />/>
+                         value={this.state.title} />
                   <div className='fandom-level-btns'>
                     <button className='novice-btn'>Novice</button>
                     <button className='intermediate-btn'>Intermediate</button>
                     <button className='Expertnovice-btn'>Expert</button>
                   </div>
  
-                  <button>Do. Or do not.</button>
+                  <button>Do. Or do not. Submit</button>
               </form>
             </section>
         )
