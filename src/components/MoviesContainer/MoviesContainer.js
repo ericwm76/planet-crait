@@ -11,6 +11,7 @@ const MoviesContainer = ({selectMovie}) => {
         title={movie.title} 
         year={movie.release_date}
         url={movie.url}
+        img={movie.img}
         selectMovie={selectMovie}
         />
       )
