@@ -13,6 +13,7 @@ class LandingPage extends Component {
     render() {
         return(
             <section className='landing-page'>
+                 <h2>Welcome to Planet Crait</h2>
               <form className='landing-form'>
                   <input className='name-input' 
                          type='text'
@@ -30,7 +31,7 @@ class LandingPage extends Component {
                     <button className='Expertnovice-btn'>Expert</button>
                   </div>
  
-                  <button>Do. Or do not. Submit</button>
+                  <button className='submit-btn' >Do. Or do not. Submit</button>
               </form>
             </section>
         )
