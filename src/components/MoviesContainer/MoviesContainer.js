@@ -17,9 +17,9 @@ const MoviesContainer = ({selectMovie}) => {
     })
 
   return (
-    <div>
+    <section className='movies-container'>
       {movieCards}
-    </div>  
+    </section>  
   )
 }
 
