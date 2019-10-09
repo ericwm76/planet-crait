@@ -2,18 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh;
   background-image: url('https://media.giphy.com/media/nEfs1tRuKsXxm/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffffa6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .landing-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
+  width: 60%;
 }
 
 .name-input,
@@ -21,7 +30,7 @@
   font-size: 2em;
   border: none;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
   width: 110%;
 }
 
@@ -31,5 +40,32 @@
   border-radius: 5px;
   margin: 10px;
   padding: 5px;
+  &:hover {
+    background: #c0392b;
+    color: white;
+  }
+}
+
+.btn {
+  @extend .submit-btn;
+  font-size: 24px;
+}
+
+.novice-btn:hover {
+  background: blue;
+}
+
+.intermediate-btn:hover {
+    background: green;
+  }
+
+.expert-btn:hover {
+    background: purple;
+  }
+
+h2 {
+  color: #c0392b;
+  font-size: 5em;
+  margin: 20px;
 }
 
