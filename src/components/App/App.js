@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { getMovieData, getCharacters } from '../../apiCalls';
 
 import MoviesContainer from '../MoviesContainer/MoviesContainer';

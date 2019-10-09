@@ -1,3 +1,9 @@
 .landing-page {
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://media.giphy.com/media/nEfs1tRuKsXxm/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
