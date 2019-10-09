@@ -1,3 +1,11 @@
+$crait-color : #c0392b;
+$novice-color : blue;
+$intermediate-color : green;
+$expert-color : purple;
+$hover-text-color: white;
+$landing-form-color: #ffffffa6;
+
+
 .landing-page {
   display: flex;
   justify-content: center;
@@ -13,7 +21,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffffffa6;
+  background-color: $landing-form-color;
   border-radius: 10px;
   padding: 20px;
 }
@@ -41,8 +49,8 @@
   margin: 10px;
   padding: 5px;
   &:hover {
-    background: #c0392b;
-    color: white;
+    background: $crait-color;
+    color: $hover-text-color;
   }
 }
 
@@ -52,19 +60,19 @@
 }
 
 .novice-btn:hover {
-  background: blue;
+  background: $novice-color;
 }
 
 .intermediate-btn:hover {
-    background: green;
+    background: $intermediate-color;
   }
 
 .expert-btn:hover {
-    background: purple;
+    background: $expert-color;
   }
 
-h2 {
-  color: #c0392b;
+.welcome-crait {
+  color: $crait-color;
   font-size: 5em;
   margin: 20px;
 }

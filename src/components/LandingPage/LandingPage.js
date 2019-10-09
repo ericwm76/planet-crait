@@ -14,7 +14,7 @@ class LandingPage extends Component {
         return(
             <section className='landing-page'>
                 <div className='form-section'>
-                  <h2>Welcome to Planet Crait</h2>
+                  <h2 className='welcome-crait'>Welcome to Planet Crait</h2>
                   <form className='landing-form'>
                     <input className='name-input' 
                          type='text'
