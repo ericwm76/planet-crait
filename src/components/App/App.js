@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
+import { Route, Nav} from 'react-router-dom';
 import { getMovieData, getCharacters } from '../../apiCalls';
 
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
@@ -34,12 +35,13 @@ class App extends Component {
 
   render() {
     return (
-      <section className="App">
+      <main className="App">
+        <Route exact path='/' component={LandingPage} />
         <LandingPage />
         <MoviesContainer selectMovie={this.selectMovie} />
         <CharactersContainer />
         <FavouritesContainer />
-      </section>
+      </main>
     );
   }
 }
