@@ -37,8 +37,8 @@ class App extends Component {
     return (
       <main className="App">
         <Route exact path='/' component={LandingPage} />
-        <LandingPage />
-        <MoviesContainer selectMovie={this.selectMovie} />
+        {/* <LandingPage /> */}
+        <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
         <CharactersContainer />
         <FavouritesContainer />
       </main>
