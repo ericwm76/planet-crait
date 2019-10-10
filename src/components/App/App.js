@@ -46,7 +46,9 @@ class App extends Component {
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
         {this.state.isLoggedIn && <Route exact path='/movies' render={() => <SideBar />}/>} 
         <Route exact path='/characters' render={() => <CharactersContainer />} />
+        {this.state.isLoggedIn && <Route exact path='/characters' render={() => <SideBar />}/>} 
         <Route exact path='/favourites' render={() => <FavouritesContainer />} />
+        {this.state.isLoggedIn && <Route exact path='/favourites' render={() => <SideBar />}/>} 
       </main>
     );
   }
