@@ -12,7 +12,7 @@ const Character = (props) => {
 
         </div>
         <div className='favourite-button'>
-
+        <i className="fal fa-jedi"></i>
         </div>
       </section>
   )
