@@ -15,7 +15,7 @@ export const getMovieData = (movieUrl) => {
             let promise3 = getSpecies(species).then(speciesObj => speciesObj.name)
             return Promise.all([promise1, promise2, promise3]).then(data => ({name: characterObj.name, species: data[2], homeworldName: data[1].homeWorldName, homeworldPop: data[1].homeWorldPop, appearsIn: data[0], favorited: false}))
          })
-   })
+   }) 
 
    return Promise.all(char);
 }
