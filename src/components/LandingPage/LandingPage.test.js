@@ -5,7 +5,7 @@ import LandingPage from './LandingPage';
 describe('LandingPage', () => {
   let wrapper;
 
-  describe(() => {
+  beforeEach(() => {
     wrapper = shallow(<LandingPage />)
   })
 
