@@ -24,6 +24,10 @@ class App extends Component {
    
   }
 
+  logIn = () => {
+    this.setState({isLoggedIn: true})
+  }
+
   selectMovie = (movie) => {
     getMovieData(movie)
      .then(data => {
@@ -37,10 +41,10 @@ class App extends Component {
 
   render() {
     return (
-      <main className="App">
-        {this.state.isLoggedIn && <SideBar />}
-        <Route exact path='/' render={() => <LandingPage loggedin={this.state.isLoggedIn} />} />
+    <main className="App">
+        <Route exact path='/' render={() => <LandingPage logIn={this.logIn} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
+        {this.state.isLoggedIn && <Route exact path='/movies' render={() => <SideBar />}/>} 
         <Route exact path='/characters' render={() => <CharactersContainer />} />
         <Route exact path='/favourites' render={() => <FavouritesContainer />} />
       </main>
