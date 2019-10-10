@@ -13,7 +13,7 @@ const Favourite = (props) => {
 
         </div>
         <div className='favourite-button'>
-        <i className="fal fa-jedi"></i>
+        <i className="fas fa-jedi"></i>
         </div>
       </section>
   )
