@@ -11,6 +11,12 @@ class LandingPage extends Component {
       }
     }
 
+    logIn = (props) => {
+      const { loggedin } = props;
+        
+      loggedin(true)
+    }
+
     render() {
         return(
             <section className='landing-page'>
@@ -33,7 +39,7 @@ class LandingPage extends Component {
                       <button className='expert-btn btn'>Expert</button>
                     </div>
  
-                    <Link to={`/movies`} className='submit-btn' >Do. Or do not. Submit</Link>
+                    <Link to={`/movies`} className='submit-btn' onClick={() => this.logIn()} >Do. Or do not. Submit</Link>
                   </form>
                 </div>
             </section>

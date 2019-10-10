@@ -15,7 +15,8 @@ class App extends Component {
     super();
     this.state = {
        movie: {},
-       characters: []
+       characters: [],
+       isLoggedIn: false
     }
   }
 
@@ -37,7 +38,8 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <Route exact path='/' component={LandingPage} />
+        {this.state.isLoggedIn && <SideBar />}
+        <Route exact path='/' render={() => <LandingPage loggedin={this.state.isLoggedIn} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
         <Route exact path='/characters' render={() => <CharactersContainer />} />
         <Route exact path='/favourites' render={() => <FavouritesContainer />} />
