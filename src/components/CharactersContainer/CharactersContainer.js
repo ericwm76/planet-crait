@@ -1,4 +1,5 @@
 import React from 'react';
+import './CharactersContainer.scss';
 import Character from '../Character/Character';
 
 const CharactersContainer = (props) => {

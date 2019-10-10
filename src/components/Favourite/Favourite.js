@@ -1,4 +1,5 @@
 import React from 'react';
+import './Favourite.scss';
 
 const Favourite = (props) => {
   return (

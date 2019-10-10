@@ -1,4 +1,5 @@
 import React from 'react';
+import './Character.scss';
 
 const Character = (props) => {
   return (
