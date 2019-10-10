@@ -3,6 +3,8 @@ import './App.scss';
 import { getMovieData, getCharacters } from '../../apiCalls';
 
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
+import CharactersContainer from '../CharactersContainer/CharactersContainer';
+import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import LandingPage from '../LandingPage/LandingPage';
 
 
@@ -35,6 +37,8 @@ class App extends Component {
       <section className="App">
         <LandingPage />
         <MoviesContainer selectMovie={this.selectMovie} />
+        <CharactersContainer />
+        <FavouritesContainer />
       </section>
     );
   }
