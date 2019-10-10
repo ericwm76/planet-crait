@@ -15,12 +15,17 @@ class App extends Component {
     super();
     this.state = {
        movie: {},
-       characters: []
+       characters: [],
+       isLoggedIn: false
     }
   }
 
   componentDidMount = () => {
    
+  }
+
+  logIn = () => {
+    this.setState({isLoggedIn: true})
   }
 
   selectMovie = (movie) => {
@@ -36,11 +41,14 @@ class App extends Component {
 
   render() {
     return (
-      <main className="App">
-        <Route exact path='/' component={LandingPage} />
+    <main className="App">
+        <Route exact path='/' render={() => <LandingPage logIn={this.logIn} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
+        {this.state.isLoggedIn && <Route exact path='/movies' render={() => <SideBar />}/>} 
         <Route exact path='/characters' render={() => <CharactersContainer />} />
+        {this.state.isLoggedIn && <Route exact path='/characters' render={() => <SideBar />}/>} 
         <Route exact path='/favourites' render={() => <FavouritesContainer />} />
+        {this.state.isLoggedIn && <Route exact path='/favourites' render={() => <SideBar />}/>} 
       </main>
     );
   }

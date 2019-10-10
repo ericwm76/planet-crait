@@ -33,7 +33,7 @@ class LandingPage extends Component {
                       <button className='expert-btn btn'>Expert</button>
                     </div>
  
-                    <Link to={`/movies`} className='submit-btn' >Do. Or do not. Submit</Link>
+                    <Link to={`/movies`} className='submit-btn' onClick={this.props.logIn}>Do. Or do not. Submit</Link>
                   </form>
                 </div>
             </section>
