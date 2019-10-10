@@ -7,6 +7,7 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import LandingPage from '../LandingPage/LandingPage';
+import SideBar from '../SideBar/SideBar';
 
 
 class App extends Component {
@@ -37,10 +38,9 @@ class App extends Component {
     return (
       <main className="App">
         <Route exact path='/' component={LandingPage} />
-        {/* <LandingPage /> */}
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
-        <CharactersContainer />
-        <FavouritesContainer />
+        <Route exact path='/characters' render={() => <CharactersContainer />} />
+        <Route exact path='/favourites' render={() => <FavouritesContainer />} />
       </main>
     );
   }

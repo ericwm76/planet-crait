@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './LandingPage.scss';
+import { Link } from 'react-router-dom';
 
 class LandingPage extends Component {
     constructor() {
@@ -32,7 +33,7 @@ class LandingPage extends Component {
                       <button className='expert-btn btn'>Expert</button>
                     </div>
  
-                    <button className='submit-btn' >Do. Or do not. Submit</button>
+                    <Link to={`/movies`} className='submit-btn' >Do. Or do not. Submit</Link>
                   </form>
                 </div>
             </section>
