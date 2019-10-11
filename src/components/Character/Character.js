@@ -1,6 +1,7 @@
 import React from 'react';
 import './Character.scss';
 
+
 const Character = (props) => {
   return (
       <section className='character'>
@@ -9,7 +10,7 @@ const Character = (props) => {
         <p>Population of Homeworld</p>
         <p>Species</p>
         <div className='related-films'>
-          <p>Related Films</p>
+          <p>Related Films</p> 
 
         </div>
         <div className='favourite-button'>

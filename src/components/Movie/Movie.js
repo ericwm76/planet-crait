@@ -11,7 +11,7 @@ const Movie = ({id, title, year, url, img, selectMovie}) => {
       <h3>{year}</h3>
      {/* </Link> */}
     </section>
-  )
+  )  
 }
 
 export default Movie;

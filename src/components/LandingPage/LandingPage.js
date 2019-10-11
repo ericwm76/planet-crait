@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './LandingPage.scss';
 import { Link } from 'react-router-dom';
+import SideBar from '../SideBar/SideBar';
 
 class LandingPage extends Component {
     constructor() {
@@ -21,7 +22,6 @@ class LandingPage extends Component {
        const { setUsers } = this.props;
        setUsers(this.state.name, this.state.quote, this.state.level);
     }
-
 
     render() {
         return(
@@ -62,7 +62,7 @@ class LandingPage extends Component {
                       </button>
                     </div>
  
-                    <Link to={`/movies`} className='submit-btn' onClick={this.props.logIn, this.updateName}>Do. Or do not. Submit</Link>
+                    <Link to={`/movies`} className='submit-btn' onClick={() => this.updateName}>Do. Or do not. Submit</Link>
                   </form>
                 </div>
             </section>

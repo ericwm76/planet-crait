@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
        movie: {},
        characters: [],
-       isLoggedIn: false,
+      //  isLoggedIn: false,
        name: '',
        quote: '',
        rank: ''
@@ -27,9 +27,9 @@ class App extends Component {
    
   }
 
-  logIn = () => {
-    this.setState({isLoggedIn: true})
-  }
+  // logIn = () => {
+  //   this.setState({isLoggedIn: true})
+  // }
 
   selectMovie = (movie) => {
     getMovieData(movie)
@@ -55,11 +55,8 @@ class App extends Component {
     <main className="App">
         <Route exact path='/' render={() => <LandingPage logIn={this.logIn} setUsers={this.setUsers} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
-        {this.state.isLoggedIn && <Route exact path='/movies' render={() => <SideBar />}/>} 
         <Route exact path='/characters' render={() => <CharactersContainer />} />
-        {this.state.isLoggedIn && <Route exact path='/characters' render={() => <SideBar />}/>} 
         <Route exact path='/favourites' render={() => <FavouritesContainer />} />
-        {this.state.isLoggedIn && <Route exact path='/favourites' render={() => <SideBar />}/>} 
       </main>
     );
   }

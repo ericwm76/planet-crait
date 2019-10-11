@@ -7,7 +7,7 @@ const CharactersContainer = (props) => {
     return (
       <section className='character-container'>
         <Character />
-      </section>
+      </section> 
     )
 }
 

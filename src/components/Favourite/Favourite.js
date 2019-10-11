@@ -16,7 +16,7 @@ const Favourite = (props) => {
         <i className="fas fa-jedi"></i>
         </div>
       </section>
-  )
+  ) 
 }
 
 export default Favourite ;

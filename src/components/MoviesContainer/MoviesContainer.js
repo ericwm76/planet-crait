@@ -2,6 +2,7 @@ import React from 'react';
 import './MoviesContainer.scss';
 import initialMovies from '../../initialData';
 import Movie from '../Movie/Movie'
+import SideBar from '../SideBar/SideBar';
 
 const MoviesContainer = ({selectMovie}) => {
   const movieCards = initialMovies.map(movie => {
@@ -15,10 +16,11 @@ const MoviesContainer = ({selectMovie}) => {
         selectMovie={selectMovie}
         />
       )
-    })
+    }) 
 
   return (
     <section className='movies-container'>
+      <SideBar />
       {movieCards}
     </section>  
   )
