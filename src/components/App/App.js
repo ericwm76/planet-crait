@@ -16,7 +16,10 @@ class App extends Component {
     this.state = {
        movie: {},
        characters: [],
-       isLoggedIn: false
+       isLoggedIn: false,
+       name: '',
+       quote: '',
+       rank: ''
     }
   }
 
@@ -39,10 +42,18 @@ class App extends Component {
     })
   }
 
+  setUsers = (name, quote, rank) => {
+    this.setState({
+      name: name,
+      quote: quote,
+      rank: rank
+    })
+  }
+
   render() {
     return (
     <main className="App">
-        <Route exact path='/' render={() => <LandingPage logIn={this.logIn} />} />
+        <Route exact path='/' render={() => <LandingPage logIn={this.logIn} setUsers={this.setUsers} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
         {this.state.isLoggedIn && <Route exact path='/movies' render={() => <SideBar />}/>} 
         <Route exact path='/characters' render={() => <CharactersContainer />} />
