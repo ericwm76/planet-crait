@@ -7,6 +7,7 @@ const FavouritesContainer = (props) => {
 
     return (
       <section className='Favourites-container'>
+        <SideBar />
         <Favourite />
       </section>
     ) 
