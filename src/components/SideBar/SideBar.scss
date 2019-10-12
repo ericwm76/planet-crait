@@ -36,3 +36,17 @@ nav {
           }
     }
 }
+
+.user-image {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user-section {
+  margin: 10px;
+}

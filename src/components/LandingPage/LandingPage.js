@@ -44,19 +44,19 @@ class LandingPage extends Component {
                     <div className='fandom-level-btns'>
                       <button className='novice-btn btn' 
                               name='level' 
-                              value='novice'
+                              value='Novice'
                               onClick={(e) => this.handleChange(e)}>
                               Novice 
                       </button>
                       <button className='intermediate-btn btn' 
                               name='level' 
-                              value='intermediate'
+                              value='Intermediate'
                               onClick={(e) => this.handleChange(e)}>
                               Intermediate
                       </button>
                       <button className='expert-btn btn' 
                               name='level' 
-                              value='expert'
+                              value='Expert'
                               onClick={(e) => this.handleChange(e)}>
                                 Expert
                       </button>
