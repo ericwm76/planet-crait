@@ -4,7 +4,8 @@ import initialMovies from '../../initialData';
 import Movie from '../Movie/Movie'
 import SideBar from '../SideBar/SideBar';
 
-const MoviesContainer = ({selectMovie}) => {
+const MoviesContainer = ({selectMovie, name, quote, rank}) => {
+  console.log(name, quote, rank)
   const movieCards = initialMovies.map(movie => {
       return (<Movie 
         key={movie.episode_id} 
@@ -20,7 +21,9 @@ const MoviesContainer = ({selectMovie}) => {
 
   return (
     <section className='movies-container'>
-      <SideBar />
+      <SideBar name={name}
+               quote={quote}
+               rank={rank}/>
       {movieCards}
     </section>  
   )

@@ -46,7 +46,7 @@ class LandingPage extends Component {
                               name='level' 
                               value='novice'
                               onClick={(e) => this.handleChange(e)}>
-                              Novice
+                              Novice 
                       </button>
                       <button className='intermediate-btn btn' 
                               name='level' 
@@ -62,7 +62,7 @@ class LandingPage extends Component {
                       </button>
                     </div>
  
-                    <Link to={`/movies`} className='submit-btn' onClick={() => this.updateName}>Do. Or do not. Submit</Link>
+                    <Link to={`/movies`} className='submit-btn' onClick={this.updateName}>Do. Or do not. Submit</Link>
                   </form>
                 </div>
             </section>

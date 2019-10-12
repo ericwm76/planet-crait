@@ -7,16 +7,14 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import LandingPage from '../LandingPage/LandingPage';
-import SideBar from '../SideBar/SideBar';
 
 
-class App extends Component {
+class App extends Component { 
   constructor() {
     super();
     this.state = {
        movie: {},
        characters: [],
-      //  isLoggedIn: false,
        name: '',
        quote: '',
        rank: ''
@@ -26,10 +24,6 @@ class App extends Component {
   componentDidMount = () => {
    
   }
-
-  // logIn = () => {
-  //   this.setState({isLoggedIn: true})
-  // }
 
   selectMovie = (movie) => {
     getMovieData(movie)
@@ -53,10 +47,10 @@ class App extends Component {
   render() {
     return (
     <main className="App">
-        <Route exact path='/' render={() => <LandingPage logIn={this.logIn} setUsers={this.setUsers} />} />
-        <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
-        <Route exact path='/characters' render={() => <CharactersContainer />} />
-        <Route exact path='/favourites' render={() => <FavouritesContainer />} />
+        <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
+        <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
+        <Route exact path='/characters' render={() => <CharactersContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
+        <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
       </main>
     );
   }

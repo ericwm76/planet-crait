@@ -2,14 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './SideBar.scss';
 
-const SideBar = () => {
+const SideBar = ({name, quote, rank}) => {
   return (
    <nav>
      <section className='user-info'>
        <image src='' alt='' />
-       <h2>Name</h2>
-       <p>Favorite quote: </p> 
-       <p>Rank: </p>
+       <h2>{name}</h2>
+       <p>{quote}</p> 
+       <p>{rank}</p>
      </section>
 
      <section className='nav-links'>
