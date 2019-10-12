@@ -1,10 +1,12 @@
 $crait-color : #c0392b;
+$background-color : #faebd745;
  
  .movie {
   margin: 10px;
   padding: 10px;
   border: 2px solid $crait-color;
   border-radius: 10px;
+  background: $background-color;
   &:hover {
     background-color: #EAFCEB;
     cursor: pointer;
