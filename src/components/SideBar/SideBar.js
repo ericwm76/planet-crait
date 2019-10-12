@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './SideBar.scss';
 
 const SideBar = () => {
   return (
@@ -7,7 +8,7 @@ const SideBar = () => {
      <section className='user-info'>
        <image src='' alt='' />
        <h2>Name</h2>
-       <p>Favorite quote: </p>
+       <p>Favorite quote: </p> 
        <p>Rank: </p>
      </section>
 
