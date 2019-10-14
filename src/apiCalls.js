@@ -4,8 +4,8 @@ export const getMovieData = (movieUrl) => {
      .then(movieData => movieData)
 }
 
-   export const getCharacters = (characterUrls) => {
-   const char = characterUrls.map((characterUrl) => {
+export const getCharacters = (characterUrls) => {
+   const char = characterUrls.slice(0, 10).map((characterUrl) => {
        return fetch(characterUrl)
          .then(response => response.json())
          .then(characterObj => {
