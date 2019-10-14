@@ -18,7 +18,6 @@ const SideBar = ({name, quote, rank}) => {
 
      <section className='nav-links'>
        <NavLink exact to='/movies' className='nav'> Movies </NavLink>
-       <NavLink exact to='/characters' className='nav'> Characters </NavLink>
        <NavLink exact to='/favourites' className='nav'> Favourites </NavLink>
        <NavLink exact to='/' className='nav'> Sign out </NavLink>
      </section>
