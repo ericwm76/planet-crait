@@ -8,6 +8,7 @@ const Movie = ({id, title, year, url, img, selectMovie}) => {
       <img src={img} alt={title} />
       <h2>Episode {id}: {title}</h2>
       <h3>{year}</h3>
+      <Link to={`/movies/${id}`}>View Characters</Link>
     </section>
   )  
 }

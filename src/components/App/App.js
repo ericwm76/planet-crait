@@ -54,7 +54,7 @@ class App extends Component {
       <main className="App">
         <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
-        <Route exact path='/characters' render={() => <CharactersContainer characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
+        <Route exact path='/movies/:id' render={() => <CharactersContainer characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
         <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
       </main>
     );
