@@ -1,3 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MoviesContainer should match snapshot with all data passing in correctly 1`] = `undefined`;
+exports[`MoviesContainer should match snapshot with all data passing in correctly 1`] = `
+<section
+  className="movies-container"
+>
+  <SideBar />
+  <Movie
+    id={1}
+    img="https://images-na.ssl-images-amazon.com/images/I/51o6zchqOFL.jpg"
+    key="1"
+    title="The Phantom Menace"
+    url="https://swapi.co/api/films/4/"
+    year="1999"
+  />
+  <Movie
+    id={2}
+    img="https://images-na.ssl-images-amazon.com/images/I/51vGOd37gmL._SY445_.jpg"
+    key="2"
+    title="Attack of the Clones"
+    url="https://swapi.co/api/films/5/"
+    year="2002"
+  />
+  <Movie
+    id={3}
+    img="https://images-na.ssl-images-amazon.com/images/I/61UpAncAQbL._SY679_.jpg"
+    key="3"
+    title="Revenge of the Sith"
+    url="https://swapi.co/api/films/6/"
+    year="2005"
+  />
+  <Movie
+    id={4}
+    img="https://cdn2.bigcommerce.com/n-nr1m3w/b72t4x/products/91670/images/99628/13828__18178.1506102502.380.500.jpg?c=2"
+    key="4"
+    title="A New Hope"
+    url="https://swapi.co/api/films/1/"
+    year="1977"
+  />
+  <Movie
+    id={5}
+    img="https://images-na.ssl-images-amazon.com/images/I/51q8Jb98R4L.jpg"
+    key="5"
+    title="The Empire Strikes Back"
+    url="https://swapi.co/api/films/2/"
+    year="1980"
+  />
+  <Movie
+    id={6}
+    img="https://images-na.ssl-images-amazon.com/images/I/51tzSrztRIL.jpg"
+    key="6"
+    title="Return of the Jedi"
+    url="https://swapi.co/api/films/3/"
+    year="1983"
+  />
+  <Movie
+    id={7}
+    img="https://imgc.allpostersimages.com/img/print/u-g-F8G58H0.jpg?w=550&h=550&p=0"
+    key="7"
+    title="The Force Awakens"
+    url="https://swapi.co/api/films/7/"
+    year="2015"
+  />
+</section>
+`;

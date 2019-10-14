@@ -7,7 +7,7 @@ const CharactersContainer = ({ characters }) => {
   const characterCards = characters.map((character, i) => {
     return (
       <Character
-        name={character.name}
+        name={character.name} 
         species={character.species}
         homeworldName={character.homeworldName}
         homeworldPop={character.homeworldPop}

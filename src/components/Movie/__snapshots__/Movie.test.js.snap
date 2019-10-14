@@ -1,3 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Movie should match snapshot with all data passing in correctly 1`] = `undefined`;
+exports[`Movie should match snapshot with all data passing in correctly 1`] = `
+<section
+  className="movie"
+  onClick={[Function]}
+>
+  <img />
+  <h2>
+    Episode 
+    :
+  </h2>
+  <h2 />
+  <h3 />
+  <Link
+    to="/movies/undefined"
+  >
+    View Characters
+  </Link>
+</section>
+`;
