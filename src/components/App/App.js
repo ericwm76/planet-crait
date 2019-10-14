@@ -25,7 +25,8 @@ class App extends Component {
   selectMovie = (movie) => {
     getMovieData(movie)
      .then(data => {
-      this.setState({ movie : data });
+      this.setState({ movie : data })
+      console.log(data)
       
       getCharacters(this.state.movie.characters)
         .then(data => this.setState({ characters: data }))
