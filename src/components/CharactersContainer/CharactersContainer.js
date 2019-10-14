@@ -13,7 +13,7 @@ const CharactersContainer = ({ characters }) => {
         homeworldPop={character.homeworldPop}
         appearsIn={character.appearsIn}
         favorited={character.favorited}
-        key={i}
+        key={ i + character.name }
       />
     )
   })

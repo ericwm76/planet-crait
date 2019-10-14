@@ -22,10 +22,6 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
-    // this.getSampleCharacters();
-  }
-
   selectMovie = (movie) => {
     getMovieData(movie)
      .then(data => {
