@@ -1,3 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FavouritesContainer should match snapshot with all data passing in correctly 1`] = `undefined`;
+exports[`FavouritesContainer should match snapshot with all data passing in correctly 1`] = `
+<section
+  className="Favourites-container"
+>
+  <SideBar />
+  <Favourite />
+</section>
+`;

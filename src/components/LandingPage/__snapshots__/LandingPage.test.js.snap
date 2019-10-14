@@ -1,3 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LandingPage should match snapshot with all data passing in correctly 1`] = `undefined`;
+exports[`LandingPage should match snapshot with all data passing in correctly 1`] = `
+<section
+  className="landing-page"
+>
+  <div
+    className="form-section"
+  >
+    <h2
+      className="welcome-crait"
+    >
+      Welcome to Planet Crait
+    </h2>
+    <form
+      className="landing-form"
+    >
+      <input
+        className="name-input"
+        name="name"
+        onChange={[Function]}
+        placeholder="Name of Jedi"
+        type="text"
+        value=""
+      />
+      <input
+        className="quote-input"
+        name="quote"
+        onChange={[Function]}
+        placeholder="Your favourite Star Wars quote here"
+        type="text"
+      />
+      <div
+        className="fandom-level-btns"
+      >
+        <button
+          className="novice-btn btn"
+          name="level"
+          onClick={[Function]}
+          value="Novice"
+        >
+          Novice
+        </button>
+        <button
+          className="intermediate-btn btn"
+          name="level"
+          onClick={[Function]}
+          value="Intermediate"
+        >
+          Intermediate
+        </button>
+        <button
+          className="expert-btn btn"
+          name="level"
+          onClick={[Function]}
+          value="Expert"
+        >
+          Expert
+        </button>
+      </div>
+      <Link
+        className="submit-btn"
+        onClick={[Function]}
+        to="/movies"
+      >
+        Do. Or do not. Submit
+      </Link>
+    </form>
+  </div>
+</section>
+`;

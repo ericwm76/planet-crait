@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScrollText should match snapshot with all data passing in correctly 1`] = `undefined`;
+exports[`ScrollText should match snapshot with all data passing in correctly 1`] = `
+<section
+  className="scroll-text"
+/>
+`;

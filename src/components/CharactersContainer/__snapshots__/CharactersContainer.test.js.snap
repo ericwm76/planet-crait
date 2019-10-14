@@ -1,3 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharactersContainer should match snapshot with all data passing in correctly 1`] = `undefined`;
+exports[`CharactersContainer should match snapshot with all data passing in correctly 1`] = `
+<section
+  className="character-container"
+>
+  <SideBar />
+  <Character
+    appearsIn={
+      Array [
+        "The Empire Strikes Back",
+        "Return of the Jedi",
+        "A New Hope",
+        "Revenge of the Sith",
+        "The Force Awakens",
+      ]
+    }
+    favorited={false}
+    homeworldName="Tatooine"
+    homeworldPop="200000"
+    key="0Luke Skywalker"
+    name="Luke Skywalker"
+    species="Human"
+  />
+  <Character
+    appearsIn={
+      Array [
+        "The Empire Strikes Back",
+        "Return of the Jedi",
+        "A New Hope",
+        "The Phantom Menace",
+        "Attack of the Clones",
+        "Revenge of the Sith",
+      ]
+    }
+    favorited={false}
+    homeworldName="Tatooine"
+    homeworldPop="200000"
+    key="1C-3PO"
+    name="C-3PO"
+    species="Droid"
+  />
+</section>
+`;

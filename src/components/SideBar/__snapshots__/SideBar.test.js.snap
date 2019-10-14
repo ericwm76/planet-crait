@@ -1,3 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideBar should match snapshot with all data passing in correctly 1`] = `undefined`;
+exports[`SideBar should match snapshot with all data passing in correctly 1`] = `
+<nav>
+  <section
+    className="user-info"
+  >
+    <div>
+      <img
+        alt="user default image"
+        className="user-image"
+        src="https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/10/star-wars-8-porg-920x584.png"
+      />
+    </div>
+    <div
+      className="user-section"
+    >
+      <h2 />
+      <p />
+      <p />
+    </div>
+  </section>
+  <section
+    className="nav-links"
+  >
+    <NavLink
+      className="nav"
+      exact={true}
+      to="/movies"
+    >
+       Movies 
+    </NavLink>
+    <NavLink
+      className="nav"
+      exact={true}
+      to="/favourites"
+    >
+       Favourites 
+    </NavLink>
+    <NavLink
+      className="nav"
+      exact={true}
+      to="/"
+    >
+       Sign out 
+    </NavLink>
+  </section>
+</nav>
+`;

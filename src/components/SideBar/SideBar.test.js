@@ -12,4 +12,4 @@ describe('SideBar', () => {
   it('should match snapshot with all data passing in correctly', () => {
     expect(wrapper).toMatchSnapshot();
   })
-})
+}) 

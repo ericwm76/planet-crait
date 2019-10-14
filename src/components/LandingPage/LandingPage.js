@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './LandingPage.scss';
 import { Link } from 'react-router-dom';
-import SideBar from '../SideBar/SideBar';
 
 class LandingPage extends Component {
     constructor() {

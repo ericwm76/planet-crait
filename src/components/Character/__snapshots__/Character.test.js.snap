@@ -1,3 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Character should match snapshot with all data passed in correctly 1`] = `undefined`;
+exports[`Character should match snapshot with all data passed in correctly 1`] = `
+<section
+  className="character"
+>
+  <h3>
+    Name: 
+    Luke Skywalker
+  </h3>
+  <p>
+    Species: 
+    Human
+  </p>
+  <p>
+    Homeworld: 
+    Tatooine
+  </p>
+  <p>
+    Population of Homeworld: 
+    200000
+  </p>
+  <div
+    className="related-films"
+  >
+    <p>
+      Appears in: 
+    </p>
+    <p>
+      The Empire Strikes Back
+    </p>
+    <p>
+      Return of the Jedi
+    </p>
+    <p>
+      A New Hope
+    </p>
+    <p>
+      Revenge of the Sith
+    </p>
+    <p>
+      The Force Awakens
+    </p>
+  </div>
+  <div
+    className="favourite-button"
+  >
+    <i
+      className="fas fa-jedi"
+    />
+  </div>
+</section>
+`;
