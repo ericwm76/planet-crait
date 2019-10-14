@@ -1,17 +1,19 @@
 $crait-color : #c0392b;
+$background-color : #faebd745;
  
  .movie {
   margin: 10px;
   padding: 10px;
   border: 2px solid $crait-color;
   border-radius: 10px;
+  background: $background-color;
   &:hover {
     background-color: #EAFCEB;
     cursor: pointer;
     box-shadow: 
-        0 0 60px 30px #EAFCEB,  /* inner white */
-        0 0 100px 60px #337F23, /* middle magenta */
-        0 0 140px 90px #69A267; /* outer cyan */
+      0 0 20px 5px #EAFCEB,  /* inner white */
+      0 0 35px 15px #337F23, /* middle magenta */
+      0 0 55px 25px #69A267; /* outer cyan */
     border: none;
   }
  }

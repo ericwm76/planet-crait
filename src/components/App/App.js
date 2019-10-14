@@ -7,25 +7,22 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import LandingPage from '../LandingPage/LandingPage';
-import SideBar from '../SideBar/SideBar';
 
 
-class App extends Component {
+class App extends Component { 
   constructor() {
     super();
     this.state = {
        movie: {},
        characters: [],
-       isLoggedIn: false
+       name: '',
+       quote: '',
+       rank: ''
     }
   }
 
   componentDidMount = () => {
    
-  }
-
-  logIn = () => {
-    this.setState({isLoggedIn: true})
   }
 
   selectMovie = (movie) => {
@@ -39,16 +36,21 @@ class App extends Component {
     })
   }
 
+  setUsers = (name, quote, rank) => {
+    this.setState({
+      name: name,
+      quote: quote,
+      rank: rank
+    })
+  }
+
   render() {
     return (
     <main className="App">
-        <Route exact path='/' render={() => <LandingPage logIn={this.logIn} />} />
-        <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} />} />
-        {this.state.isLoggedIn && <Route exact path='/movies' render={() => <SideBar />}/>} 
-        <Route exact path='/characters' render={() => <CharactersContainer />} />
-        {this.state.isLoggedIn && <Route exact path='/characters' render={() => <SideBar />}/>} 
-        <Route exact path='/favourites' render={() => <FavouritesContainer />} />
-        {this.state.isLoggedIn && <Route exact path='/favourites' render={() => <SideBar />}/>} 
+        <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
+        <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
+        <Route exact path='/characters' render={() => <CharactersContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
+        <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
       </main>
     );
   }
