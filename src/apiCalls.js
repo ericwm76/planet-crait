@@ -20,13 +20,13 @@ export const getCharacters = (characterUrls) => {
    return Promise.all(char);
 }
 
-const getHomeworld = worldUrl => {
+export const getHomeworld = worldUrl => {
    return fetch(worldUrl)
    .then(response => response.json())
    .then(homeWorld => ({ name: homeWorld.name, population: homeWorld.population }));
 }
 
-const getFilms = filmUrls => {
+export const getFilms = filmUrls => {
    const films = filmUrls.map(filmUrl => {
       return fetch(filmUrl)
       .then(response => response.json())
@@ -35,7 +35,7 @@ const getFilms = filmUrls => {
    return Promise.all(films);
 }
 
-const getSpecies = species => {
+export const getSpecies = species => {
    return fetch(species[0])
    .then(response => response.json())
    .then(species => species)
