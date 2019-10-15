@@ -8,6 +8,7 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import LandingPage from '../LandingPage/LandingPage';
+import ScrollText from '../ScrollText/ScrollText';
 
 
 class App extends Component { 
@@ -18,15 +19,15 @@ class App extends Component {
        characters: [],
        name: '',
        quote: '',
-       rank: ''
+       rank: '',
+       crawl: ''
     }
   }
 
   selectMovie = (movie) => {
     getMovieData(movie)
      .then(data => {
-      this.setState({ movie : data })
-      console.log(data)
+      this.setState({ movie : data, crawl : data.opening_crawl})
       
       getCharacters(this.state.movie.characters)
         .then(data => this.setState({ characters: data }))
@@ -53,6 +54,7 @@ class App extends Component {
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
         <Route exact path='/movies/:id' render={() => <CharactersContainer characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
         <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
+        <ScrollText movie={this.state.movie}/>
       </main>
     );
   }
