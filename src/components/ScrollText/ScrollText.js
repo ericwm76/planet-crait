@@ -7,16 +7,17 @@ const ScrollText = (props) => {
     console.log(opening_crawl);
 
     return (
-        <section className='star-wars'>
-
-            <div className='crawl'>
+        <section className='scroll-text'>
+            <div class="fade"></div>
+          <section className='star-wars'>
+              <div className='crawl'>
                 <div className='title'>
                    <p>Episode {episode_id} </p>
                    <h3>{title}</h3>
                 </div>
                 {opening_crawl}
-            </div>
-        
+              </div>
+          </section>
         </section>
     )
 }
