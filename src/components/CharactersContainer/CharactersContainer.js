@@ -4,7 +4,8 @@ import Character from '../Character/Character';
 import SideBar from '../SideBar/SideBar';
 import ScrollText from '../ScrollText/ScrollText';
 
-const CharactersContainer = ({ characters, charactersPresent, selectMovie }) => {
+const CharactersContainer = ({ characters, charactersPresent, movie ,updateFavourite}) => {
+  console.log(movie)
   const characterCards = characters.map((character, i) => {
     return (
       <Character
@@ -13,7 +14,7 @@ const CharactersContainer = ({ characters, charactersPresent, selectMovie }) => 
         homeworldName={character.homeworldName}
         homeworldPop={character.homeworldPop}
         appearsIn={character.appearsIn}
-        favorited={character.favorited}
+        updateFavourite={updateFavourite}
         key={ i + character.name }
       /> 
     )
@@ -23,7 +24,7 @@ const CharactersContainer = ({ characters, charactersPresent, selectMovie }) => 
     <section className='character-container'>
       <SideBar />
       {!charactersPresent && <img src='https://i.gifer.com/24S3.gif' alt='bb8 loader'/>}
-      {charactersPresent && <div><ScrollText movie={selectMovie} /> {characterCards}</div>}
+      {charactersPresent && <div><ScrollText movie={movie} /> {characterCards}</div>}
     </section> 
   )
 }

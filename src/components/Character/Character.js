@@ -2,7 +2,7 @@ import React from 'react';
 import './Character.scss';
 
 
-const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favorited }) => {
+const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, updateFavourite }) => {
   const films = appearsIn.map((film, i) => {
     return (
       <p key={i}>{film}</p>
@@ -11,7 +11,7 @@ const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favo
     
   return (
       <section className='character'>
-         <div className='favourite-button'>
+         <div className='favourite-button' onClick={updateFavourite}>
           <i className="fas fa-jedi"></i>
         </div>
         <h2>Name:</h2>
