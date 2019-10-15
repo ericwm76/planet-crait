@@ -42,9 +42,8 @@ describe('LandingPage', () => {
   })
 
   it('should update state when handleChange is run', () => {
-    wrapper.instance().handleChange = jest.fn(() => 'Expert')
+    wrapper.instance().handleChange(mockEvent)
 
-    wrapper.find('.expert-btn').simulate('click', mockEvent);
     expect(wrapper.state('level')).toEqual('Expert');
   });
 
