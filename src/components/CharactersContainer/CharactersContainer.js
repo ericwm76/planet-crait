@@ -14,7 +14,7 @@ const CharactersContainer = ({ characters }) => {
         appearsIn={character.appearsIn}
         favorited={character.favorited}
         key={ i + character.name }
-      />
+      /> 
     )
   })
 

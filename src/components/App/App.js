@@ -20,14 +20,15 @@ class App extends Component {
        name: '',
        quote: '',
        rank: '',
-       crawl: ''
+       moviePresent: false,
+       charactersPresent: true
     }
   }
 
   selectMovie = (movie) => {
     getMovieData(movie)
      .then(data => {
-      this.setState({ movie : data, crawl : data.opening_crawl})
+      this.setState({ movie : data, moviePresent : true})
       
       getCharacters(this.state.movie.characters)
         .then(data => this.setState({ characters: data }))
@@ -54,7 +55,7 @@ class App extends Component {
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
         <Route exact path='/movies/:id' render={() => <CharactersContainer characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
         <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
-        <ScrollText movie={this.state.movie}/>
+        {this.state.haveMovie && !this.state.haveCharacters && <ScrollText movie={this.state.movie}/>}
       </main>
     );
   }

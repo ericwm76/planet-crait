@@ -8,17 +8,39 @@ $background-color : #faebd745;
   border-radius: 10px;
   background: $background-color;
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
   &:hover {
     background-color: #EAFCEB;
-    cursor: pointer;
     box-shadow: 
       0 0 20px 5px #EAFCEB,  /* inner white */
       0 0 35px 15px #337F23, /* middle magenta */
       0 0 55px 25px #69A267; /* outer cyan */
     border: none;
   }
+  a {
+    text-decoration: none;
+    color: $crait-color;
+    font-weight: bold;
+    &:hover {
+      border: solid 1px $crait-color;
+      border-radius: 5px;
+      background-color: $crait-color;
+      color: white;
+      padding: 5px;
+    }
+   }
  }
 
  img {
   height: 17em;
+ }
+
+
+ h2 {
+   color: $crait-color;
+   text-shadow: 0.3px 0.3px black;
+   font-family: 'Share Tech Mono', monospace;
  }
