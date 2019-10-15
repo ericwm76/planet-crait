@@ -17,7 +17,7 @@ class App extends Component {
        quote: '',
        rank: '',
        charactersPresent: false,
-       favourite: []
+       favourites: []
     }
   }
 
@@ -39,13 +39,11 @@ class App extends Component {
     })
   }
 
-  updateFavourite = (character) => {
-    console.log(character)
-    //  let updatedFavourite = this.state.favourite.push(card);
-
-    //  this.setState({ favourite : updatedFavourite});
-
-    // console.log('hello')
+  updateFavourites = (character) => {
+    this.setState({
+      favourites: [...this.state.favourites, character]
+    });
+    console.log(this.state.favourites)
   }
 
   render() {
@@ -53,8 +51,8 @@ class App extends Component {
       <main className="App">
         <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
-        <Route exact path='/movies/:id' render={() => <CharactersContainer movie={this.state.movie} charactersPresent={this.state.charactersPresent} characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank} updateFavourite={this.updateFavourite}/>} />
-        <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
+        <Route exact path='/movies/:id' render={() => <CharactersContainer movie={this.state.movie} charactersPresent={this.state.charactersPresent} characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank} updateFavourites={this.updateFavourites}/>} />
+        <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank} favourites={this.state.favourites} updateFavourites={this.updateFavourites}/>}/>
         
       </main>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import './Character.scss';
 import PropTypes from 'prop-types';
 
-const Character = ({ character, updateFavourite }) => {
+const Character = ({ character, updateFavourites }) => {
   const { name, species, homeworldName, homeworldPop, appearsIn } = character;
   const films = appearsIn.map((film, i) => {
     return (
@@ -12,8 +12,8 @@ const Character = ({ character, updateFavourite }) => {
     
   return (
       <section className='character'>
-         <div className='favourite-button' onClick={() => updateFavourite(character)}>
-          <i className="fas fa-jedi" name={name} species={species} homeworldname={homeworldName} homeworldpop={homeworldPop} appearsin={appearsIn}></i>
+         <div className='favourite-button' onClick={() => updateFavourites(character)}>
+          <i className="fas fa-jedi"></i>
         </div>
         <h2>Name:</h2>
            <p>{name}</p>
