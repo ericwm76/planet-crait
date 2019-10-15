@@ -24,8 +24,5 @@ exports[`App should match snapshot with all data passed in correctly 1`] = `
     path="/favourites"
     render={[Function]}
   />
-  <ScrollText
-    movie={Object {}}
-  />
 </main>
 `;

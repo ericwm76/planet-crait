@@ -1,6 +1,7 @@
 import React from 'react';
 import './Movie.scss';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Movie = ({id, title, year, url, img, selectMovie}) => {
   return (
@@ -15,3 +16,12 @@ const Movie = ({id, title, year, url, img, selectMovie}) => {
 }
 
 export default Movie;
+
+Movie.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.string,
+  year: PropTypes.string,
+  url: PropTypes.string,
+  img: PropTypes.string,
+  selectMovie: PropTypes.func
+}

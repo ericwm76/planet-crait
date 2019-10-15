@@ -6,10 +6,10 @@ exports[`Movie should match snapshot with all data passing in correctly 1`] = `
   onClick={[Function]}
 >
   <img />
-  <h2>
+  <h3>
     Episode 
     :
-  </h2>
+  </h3>
   <h2 />
   <h3 />
   <Link

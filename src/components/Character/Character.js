@@ -1,6 +1,6 @@
 import React from 'react';
 import './Character.scss';
-
+import PropTypes from 'prop-types';
 
 const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favorited }) => {
   const films = appearsIn.map(film => {
@@ -27,3 +27,12 @@ const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favo
 }
 
 export default Character;
+
+Character.propTypes = { 
+  name: PropTypes.string, 
+  species: PropTypes.string, 
+  homeworldName: PropTypes.string, 
+  homeworldPop: PropTypes.string, 
+  appearsIn: PropTypes.array, 
+  favorited: PropTypes.bool 
+}

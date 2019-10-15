@@ -28,7 +28,6 @@ class App extends Component {
       
       getCharacters(this.state.movie.characters)
         .then(data => this.setState({ characters: data , charactersPresent: true}))
-        .then(console.log(this.state.characters))
     })
   }
 
@@ -41,8 +40,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.movie)
-    // console.log(this.state.charactersPresent)
     return (
       <main className="App">
         <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
