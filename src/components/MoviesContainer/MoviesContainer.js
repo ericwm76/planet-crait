@@ -3,6 +3,7 @@ import './MoviesContainer.scss';
 import initialMovies from '../../initialData';
 import Movie from '../Movie/Movie'
 import SideBar from '../SideBar/SideBar';
+import PropTypes from 'prop-types';
 
 const MoviesContainer = ({selectMovie, name, quote, rank}) => {
   const movieCards = initialMovies.map(movie => {
