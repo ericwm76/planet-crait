@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './SideBar.scss';
+import PropTypes from 'prop-types';
 
 const SideBar = ({name, quote, rank}) => {
   return (
@@ -26,3 +27,9 @@ const SideBar = ({name, quote, rank}) => {
 }
 
 export default SideBar;
+
+SideBar.propTypes = {
+  name: PropTypes.string,
+  quote: PropTypes.string,
+  rank: PropTypes.string
+}

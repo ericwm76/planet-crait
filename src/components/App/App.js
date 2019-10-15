@@ -28,7 +28,9 @@ class App extends Component {
       
       getCharacters(this.state.movie.characters)
         .then(data => this.setState({ characters: data , charactersPresent: true}))
+        .catch(err => console.log('error!', err))
     })
+    .catch(err => console.log('error!', err))
   }
 
   setUsers = (name, quote, rank) => {
@@ -43,7 +45,6 @@ class App extends Component {
     this.setState({
       favourites: [...this.state.favourites, character]
     });
-    console.log(this.state.favourites)
   }
 
   render() {
@@ -53,7 +54,6 @@ class App extends Component {
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
         <Route exact path='/movies/:id' render={() => <CharactersContainer movie={this.state.movie} charactersPresent={this.state.charactersPresent} characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank} updateFavourites={this.updateFavourites}/>} />
         <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank} favourites={this.state.favourites} updateFavourites={this.updateFavourites}/>}/>
-        
       </main>
     );
   }
