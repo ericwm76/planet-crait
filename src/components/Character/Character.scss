@@ -15,16 +15,11 @@ $background-color : #faebd745;
   padding: 10px;
   width: 250px;
   &:hover {
-    background-color: #EAFCEB;
-    cursor: pointer;
+    background-color: #EAFCEB; 
     box-shadow: 
       0 0 20px 5px #EAFCEB,  /* inner white */
       0 0 35px 15px #337F23, /* middle magenta */
       0 0 55px 25px #69A267; /* outer cyan */
     border: none;
   }
- }
-
- img {
-  height: 17em;
  }

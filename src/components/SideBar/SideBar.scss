@@ -10,6 +10,7 @@ nav {
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
 }
 
 .nav-links {
@@ -24,7 +25,9 @@ nav {
         border: 2px solid $crait-color;
         padding: 10px;
         border-radius: 10px;
-        &:hover {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 20px;
+        &:hover { 
             background-color: #EAFCEB;
             cursor: pointer;
             box-shadow: 
@@ -45,8 +48,15 @@ nav {
 
 .user-info {
   display: flex;
+  width: 40%;
+  // justify-content: space-around;
 }
 
 .user-section {
   margin: 10px;
+  h2 {
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+    font-weight: bold;
+  }
 }
