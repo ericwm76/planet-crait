@@ -1,6 +1,5 @@
 import React from 'react';
 import './FavouritesContainer.scss';
-import Favourite from '../Favourite/Favourite';
 import SideBar from '../SideBar/SideBar';
 import Character from '../Character/Character';
 
