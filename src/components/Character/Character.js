@@ -5,7 +5,7 @@ import './Character.scss';
 const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favorited }) => {
   const films = appearsIn.map(film => {
     return (
-      <p>{film}</p>
+      <p key={Date.now()}>{film}</p>
     )
   })
     

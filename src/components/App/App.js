@@ -8,7 +8,6 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import LandingPage from '../LandingPage/LandingPage';
-import ScrollText from '../ScrollText/ScrollText';
 
 
 class App extends Component { 
@@ -20,17 +19,18 @@ class App extends Component {
        name: '',
        quote: '',
        rank: '',
-       crawl: ''
+       moviePresent: false,
+       charactersPresent: false
     }
   }
 
   selectMovie = (movie) => {
     getMovieData(movie)
      .then(data => {
-      this.setState({ movie : data, crawl : data.opening_crawl})
+      this.setState({ movie : data, moviePresent : true})
       
       getCharacters(this.state.movie.characters)
-        .then(data => this.setState({ characters: data }))
+        .then(data => this.setState({ characters: data , charactersPresent: true}))
         .then(console.log(this.state.characters))
     })
   }
@@ -44,13 +44,16 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.movie)
+    // console.log(this.state.charactersPresent)
     return (
       <main className="App">
         <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
-        <Route exact path='/movies/:id' render={() => <CharactersContainer characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
+        <Route exact path='/movies/:id' render={() => <CharactersContainer movie={this.state.movie} charactersPresent={this.state.charactersPresent} characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
         <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
-        <ScrollText movie={this.state.movie}/>
+        
+        {/* {!this.state.charactersPresent && <ScrollText movie={this.state.movie}/>} */}
       </main>
     );
   }
