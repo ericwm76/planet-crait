@@ -59,11 +59,15 @@ exports[`LandingPage should match snapshot with all data passing in correctly 1`
         </button>
       </div>
       <Link
-        className="submit-btn"
-        onClick={[Function]}
         to="/movies"
       >
-        Do. Or do not. Submit
+        <button
+          className="submit-btn"
+          disabled={true}
+          onClick={[Function]}
+        >
+          Do. Or do not. Submit
+        </button>
       </Link>
     </form>
   </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import { getMovieData, getCharacters } from '../../apiCalls';
+
+jest.mock('../../apiCalls.js');
 
 describe('App',() => {
   let wrapper;
@@ -9,6 +12,7 @@ describe('App',() => {
 
   beforeEach(() => {
     wrapper = shallow(<App />);
+
     mockMovieData = {
       url: "https://swapi.co/api/films/4/",
       episode_id: 1,
@@ -21,7 +25,15 @@ describe('App',() => {
       {name: "Luke Skywalker", species: "Human", homeworldName: "Tatooine", homeworldPop: "200000", appearsIn: ["The Empire Strikes Back", "Return of the Jedi", "A New Hope", "Revenge of the Sith", "The Force Awakens"], favorited: false},
       {name: "C-3PO", species: "Droid", homeworldName: "Tatooine", homeworldPop: "200000", appearsIn: ["The Empire Strikes Back", "Return of the Jedi", "A New Hope", "The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"], favorited: false}
       ];
-  })
+
+    getMovieData.mockImplementation(() => {
+      return Promise.resolve(mockMovieData)
+    });
+    
+    getCharacters.mockImplementation(() => {
+      return Promise.resolve(mockCharacters)
+    });
+  });
 
   it('should match snapshot with all data passed in correctly', () => {
     expect(wrapper).toMatchSnapshot();
@@ -36,25 +48,15 @@ describe('App',() => {
     expect(wrapper.state('rank')).toEqual('expert');
   });
 
-   it('should update state when selectMovie is invoked', () => {
-     // mock getMovieData function
-     // mock getCharacters function
-     // invoke the function
-     // expect wrapper.state to equal to the mocks
-     
-    //  wrapper.instance().getMovieData = jest.fn();
-    //  wrapper.instance().getCharacters = jest.fn();
+  it('should update state when selectMovie is invoked', async () => {
+    await wrapper.instance().selectMovie();
+    expect(wrapper.state('movie')).toEqual(mockMovieData)
+  });
 
-      wrapper.instance().selectMovie(mockMovieData);
+  it('should call getMovieData and getCharacters when selectMovie is called', () => {
+    wrapper.instance().selectMovie();
 
-      
-   });
-
-   it('should call getMovieData when selectMovie is called', () => {
-     wrapper.instance().selectMovie(mockMovieData);
-
-     let mockMovieMethod = jest.fn();
-
-     expect(wrapper.getMovieData).toHaveBeenCalled();
-   })
-}) 
+    expect(getMovieData).toHaveBeenCalled();
+    // expect(getCharacters).toHaveBeenCalled();
+  });
+}); 

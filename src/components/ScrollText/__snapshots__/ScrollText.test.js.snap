@@ -3,5 +3,30 @@
 exports[`ScrollText should match snapshot with all data passing in correctly 1`] = `
 <section
   className="scroll-text"
-/>
+>
+  <div
+    className="fade"
+  />
+  <section
+    className="star-wars"
+  >
+    <div
+      className="crawl"
+    >
+      <div
+        className="title"
+      >
+        <p>
+          Episode 
+          4
+           
+        </p>
+        <h3>
+          A New Pope
+        </h3>
+      </div>
+      Something something galactic something
+    </div>
+  </section>
+</section>
 `;

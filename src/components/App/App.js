@@ -35,10 +35,6 @@ class App extends Component {
     })
   }
 
-  getSampleCharacters = () => {
-    this.setState(() => ({ characters: sampleCharacters }));
-  }
-
   setUsers = (name, quote, rank) => {
     this.setState({
       name: name,
