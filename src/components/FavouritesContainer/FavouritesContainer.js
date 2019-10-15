@@ -2,6 +2,7 @@ import React from 'react';
 import './FavouritesContainer.scss';
 import SideBar from '../SideBar/SideBar';
 import Character from '../Character/Character';
+import PropTypes from 'prop-types';
 
 const FavouritesContainer = (props) => {
   const noFavsMsg = () => {
@@ -30,3 +31,11 @@ const FavouritesContainer = (props) => {
 }
 
 export default FavouritesContainer;
+
+FavouritesContainer.propTypes = {
+  name: PropTypes.string,
+  quote: PropTypes.string,
+  rank: PropTypes.string,
+  favourites: PropTypes.array,
+  updateFavourites: PropTypes.func
+}

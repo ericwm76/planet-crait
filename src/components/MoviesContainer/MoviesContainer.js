@@ -28,4 +28,11 @@ const MoviesContainer = ({selectMovie, name, quote, rank}) => {
   )
 }
 
-export default MoviesContainer
+export default MoviesContainer;
+
+MoviesContainer.propTypes = {
+  selectMovie: PropTypes.func,
+  name: PropTypes.string,
+  quote: PropTypes.string,
+  rank: PropTypes.string
+}

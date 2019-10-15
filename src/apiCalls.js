@@ -3,7 +3,6 @@ export const getMovieData = (movieUrl) => {
      .then(response => response.json())
      .then(movieData => movieData)
      .catch(err => console.log('error!', err))
-
 }
 
 export const getCharacters = (characterUrls) => {
