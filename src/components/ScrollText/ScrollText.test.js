@@ -6,7 +6,7 @@ describe('ScrollText', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ScrollText />)
+    wrapper = shallow(<ScrollText movie={ {episode_id: 4, opening_crawl: "Something something galactic something", title: "A New Pope"} }/>)
   })
 
   it('should match snapshot with all data passing in correctly', () => {
