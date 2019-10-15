@@ -9,11 +9,7 @@ const CharactersContainer = ({ characters, charactersPresent, movie, updateFavou
   const characterCards = characters.map((character, i) => {
     return (
       <Character
-        name={character.name} 
-        species={character.species}
-        homeworldName={character.homeworldName}
-        homeworldPop={character.homeworldPop}
-        appearsIn={character.appearsIn}
+        character={character}
         updateFavourite={updateFavourite}
         key={ i + character.name }
       /> 

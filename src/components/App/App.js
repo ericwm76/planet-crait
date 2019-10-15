@@ -39,12 +39,13 @@ class App extends Component {
     })
   }
 
-  updateFavourite = (card) => {
+  updateFavourite = (character) => {
+    console.log(character)
     //  let updatedFavourite = this.state.favourite.push(card);
 
     //  this.setState({ favourite : updatedFavourite});
 
-    console.log('hello')
+    // console.log('hello')
   }
 
   render() {
