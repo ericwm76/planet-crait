@@ -22,8 +22,8 @@ const CharactersContainer = ({ characters, charactersPresent, selectMovie }) => 
   return (
     <section className='character-container'>
       <SideBar />
-      {!charactersPresent && <ScrollText movie={selectMovie}/>}
-      {charactersPresent && <div>{characterCards}</div>}
+      {!charactersPresent && <img src='https://i.gifer.com/24S3.gif' alt='bb8 loader'/>}
+      {charactersPresent && <div><ScrollText movie={selectMovie} /> {characterCards}</div>}
     </section> 
   )
 }

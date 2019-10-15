@@ -1,8 +1,10 @@
 .scroll-text {
   background-image: url('https://wallpaperfm.com/img/original/3/5/2/16842.jpg');
-  height: 100vh;
+  // height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
+  margin: 0px 20px;
+  border-radius: 10px;
 }
 
 .title {
@@ -19,7 +21,7 @@
 
 .star-wars {
   display: flex;
-  height: 800px;
+  height: 100px;
   perspective: 400px;
   color: #feda4a;
   font-family: 'Pathway Gothic One', sans-serif;
@@ -44,6 +46,7 @@
   top: -100px;
 //   transform-origin: 50% 100%;
   animation: crawl 60s linear;
+  left: 7em;
 }
 
 @keyframes crawl {
