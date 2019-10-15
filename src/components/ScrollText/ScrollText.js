@@ -2,8 +2,8 @@ import React from 'react';
 import './ScrollText.scss';
 import PropTypes from 'prop-types';
 
-const ScrollText = ({ movie }) => {
-    const {episode_id, opening_crawl, title} = movie;
+const ScrollText = (props) => {
+    const {episode_id, opening_crawl, title} = props.movie;
     return (
         <section className='scroll-text'>
             <div className="fade"></div>
