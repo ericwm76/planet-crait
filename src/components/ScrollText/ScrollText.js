@@ -3,12 +3,9 @@ import './ScrollText.scss';
 
 const ScrollText = (props) => {
     const {episode_id, opening_crawl, title} = props.movie;
-    console.log(props);
-    console.log(opening_crawl);
-
     return (
         <section className='scroll-text'>
-            <div class="fade"></div>
+            <div className="fade"></div>
           <section className='star-wars'>
               <div className='crawl'>
                 <div className='title'>
