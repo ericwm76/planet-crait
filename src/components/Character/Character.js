@@ -2,8 +2,8 @@ import React from 'react';
 import './Character.scss';
 import PropTypes from 'prop-types';
 
-const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favorited }) => {
-  const films = appearsIn.map(film => {
+const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, updateFavourite }) => {
+  const films = appearsIn.map((film, i) => {
     return (
       <p key={Math.random()}>{film}</p>
     )
@@ -11,16 +11,20 @@ const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favo
     
   return (
       <section className='character'>
-        <h3>Name: {name}</h3>
-        <p>Species: {species}</p>
-        <p>Homeworld: {homeworldName}</p>
-        <p>Population of Homeworld: {homeworldPop}</p>
-        <div className='related-films'>
-          <p>Appears in: </p>
-          {films}
-        </div>
-        <div className='favourite-button'>
+         <div className='favourite-button' onClick={updateFavourite}>
           <i className="fas fa-jedi"></i>
+        </div>
+        <h2>Name:</h2>
+           <p>{name}</p>
+        <h2>Species: </h2>
+          {species}
+        <h2>Homeworld: </h2>
+          {homeworldName}
+        <h2>Population of Homeworld: </h2>
+           {homeworldPop}
+        <div className='related-films'>
+        <h2>Appears in: </h2>
+             {films}
         </div>
       </section>
   )

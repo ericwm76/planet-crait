@@ -16,8 +16,8 @@ class App extends Component {
        name: '',
        quote: '',
        rank: '',
-       moviePresent: false,
-       charactersPresent: false
+       charactersPresent: false,
+       favourite: []
     }
   }
 
@@ -39,15 +39,22 @@ class App extends Component {
     })
   }
 
+  updateFavourite = (card) => {
+    //  let updatedFavourite = this.state.favourite.push(card);
+
+    //  this.setState({ favourite : updatedFavourite});
+
+    console.log('hello')
+  }
+
   render() {
     return (
       <main className="App">
         <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
         <Route exact path='/movies' render={() => <MoviesContainer selectMovie={this.selectMovie} name={this.state.name} quote={this.state.quote} rank={this.state.rank} />} />
-        <Route exact path='/movies/:id' render={() => <CharactersContainer movie={this.state.movie} charactersPresent={this.state.charactersPresent} characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
+        <Route exact path='/movies/:id' render={() => <CharactersContainer movie={this.state.movie} charactersPresent={this.state.charactersPresent} characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank} updateFavourite={this.updateFavourite}/>} />
         <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
         
-        {/* {!this.state.charactersPresent && <ScrollText movie={this.state.movie}/>} */}
       </main>
     );
   }

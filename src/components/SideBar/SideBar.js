@@ -7,7 +7,7 @@ const SideBar = ({name, quote, rank}) => {
    <nav>
      <section className='user-info'>
        <div>
-         <img className='user-image' src='https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/10/star-wars-8-porg-920x584.png' alt='user default image' />
+         <img className='user-image' src='https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/10/star-wars-8-porg-920x584.png' alt='porg' />
        </div>
        <div className='user-section'>
          <h2>{name}</h2>

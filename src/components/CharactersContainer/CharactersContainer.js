@@ -5,7 +5,7 @@ import SideBar from '../SideBar/SideBar';
 import ScrollText from '../ScrollText/ScrollText';
 import PropTypes from 'prop-types';
 
-const CharactersContainer = ({ characters, charactersPresent, movie }) => {
+const CharactersContainer = ({ characters, charactersPresent, movie, updateFavourite }) => {
   const characterCards = characters.map((character, i) => {
     return (
       <Character
@@ -14,7 +14,7 @@ const CharactersContainer = ({ characters, charactersPresent, movie }) => {
         homeworldName={character.homeworldName}
         homeworldPop={character.homeworldPop}
         appearsIn={character.appearsIn}
-        favorited={character.favorited}
+        updateFavourite={updateFavourite}
         key={ i + character.name }
       /> 
     )
@@ -23,8 +23,8 @@ const CharactersContainer = ({ characters, charactersPresent, movie }) => {
   return (
     <section className='character-container'>
       <SideBar />
-      {!charactersPresent && <ScrollText movie={movie}/>}
-      {charactersPresent && <div>{characterCards}</div>}
+      {!charactersPresent && <img src='https://i.gifer.com/24S3.gif' alt='bb8 loader'/>}
+      {charactersPresent && <div><ScrollText movie={movie} /> {characterCards}</div>}
     </section> 
   )
 }
