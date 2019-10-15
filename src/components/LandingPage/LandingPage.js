@@ -23,6 +23,9 @@ class LandingPage extends Component {
     }
 
     render() {
+      const { name, quote, level } = this.state;
+      const isEnabled = name.length > 0 && quote.length > 0 && level.length;
+
         return(
             <section className='landing-page'>
                 <div className='form-section'>
@@ -61,7 +64,7 @@ class LandingPage extends Component {
                       </button>
                     </div>
  
-                    <Link to={`/movies`} className='submit-btn' onClick={this.updateName}>Do. Or do not. Submit</Link>
+                    <Link to={`/movies`}><button className='submit-btn' onClick={this.updateName} disabled={!isEnabled} >Do. Or do not. Submit</button></Link>
                   </form>
                 </div>
             </section>

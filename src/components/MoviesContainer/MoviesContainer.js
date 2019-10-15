@@ -16,7 +16,7 @@ const MoviesContainer = ({selectMovie, name, quote, rank}) => {
         selectMovie={selectMovie}
         />
       )
-    }) 
+    })  
 
   return (
     <section className='movies-container'>
