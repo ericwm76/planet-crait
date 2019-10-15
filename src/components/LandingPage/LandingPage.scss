@@ -6,6 +6,7 @@ $hover-text-color: white;
 $hover-text-color-2: black;
 $landing-form-color: #ffffffa6;
 $disable-text: gray;
+$robotic-text: 'Share Tech Mono', monospace;
 
 
 .landing-page {
@@ -54,6 +55,7 @@ $disable-text: gray;
     padding: 5px;
     background: white;
     color: black;
+    font-family: $robotic-text;
   &:hover {
     background: $crait-color;
     color: $hover-text-color;
@@ -70,6 +72,8 @@ $disable-text: gray;
     background: $landing-form-color;
     color: $disable-text;
     box-shadow: none;
+    font-weight: 100;
+    cursor: crosshair;
   }
 }
 
@@ -121,5 +125,7 @@ $disable-text: gray;
   color: $crait-color;
   font-size: 5em;
   margin: 20px;
+  font-family: $robotic-text;
 }
+
 
