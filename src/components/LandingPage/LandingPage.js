@@ -24,7 +24,7 @@ class LandingPage extends Component {
 
     render() {
       const { name, quote, level } = this.state;
-      const isEnabled = name.length > 0 && quote.length > 0 && level.length;
+      const isEnabled = name.length > 0 && quote.length > 0 && level.length > 0;
 
         return(
             <section className='landing-page'>
