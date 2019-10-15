@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/planet-crait/precache-manifest.5971d5caee53d0811b7cb7dd0bf2ba04.js"
+  "/planet-crait/precache-manifest.155019b6799bae3964a05763383de1fc.js"
 );
 
 self.addEventListener('message', (event) => {

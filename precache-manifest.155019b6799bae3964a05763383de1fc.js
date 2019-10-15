@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7453f2d7a8c5d434c99b4375fb90ac12",
+    "revision": "02664c01e3a76eae3a4b08b1de9e72ea",
     "url": "/planet-crait/index.html"
   },
   {
-    "revision": "6eb9a484746e0c49bc7e",
+    "revision": "323c3a3ee003222cdfec",
     "url": "/planet-crait/static/css/main.2b43b46c.chunk.css"
   },
   {
-    "revision": "0f93bc1f3ae02b7ae964",
-    "url": "/planet-crait/static/js/2.85ef50a4.chunk.js"
+    "revision": "3673a7dafc5a10915de1",
+    "url": "/planet-crait/static/js/2.c9da8b73.chunk.js"
   },
   {
-    "revision": "6eb9a484746e0c49bc7e",
-    "url": "/planet-crait/static/js/main.435c33b2.chunk.js"
+    "revision": "323c3a3ee003222cdfec",
+    "url": "/planet-crait/static/js/main.e993f236.chunk.js"
   },
   {
     "revision": "36380ef22234d2f6849a",
