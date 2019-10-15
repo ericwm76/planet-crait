@@ -4,6 +4,7 @@ $intermediate-color : green;
 $expert-color : purple;
 $hover-text-color: white;
 $landing-form-color: #ffffffa6;
+$disable-text: gray;
 
 
 .landing-page {
@@ -55,6 +56,10 @@ $landing-form-color: #ffffffa6;
   &:hover {
     background: $crait-color;
     color: $hover-text-color;
+  }
+  &:disabled {
+    background: $landing-form-color;
+    color: $disable-text;
   }
 }
 
