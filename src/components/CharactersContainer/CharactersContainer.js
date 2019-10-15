@@ -5,16 +5,12 @@ import SideBar from '../SideBar/SideBar';
 import ScrollText from '../ScrollText/ScrollText';
 import PropTypes from 'prop-types';
 
-const CharactersContainer = ({ characters, charactersPresent, movie, updateFavourite }) => {
+const CharactersContainer = ({ characters, charactersPresent, movie, updateFavourites }) => {
   const characterCards = characters.map((character, i) => {
     return (
       <Character
-        name={character.name} 
-        species={character.species}
-        homeworldName={character.homeworldName}
-        homeworldPop={character.homeworldPop}
-        appearsIn={character.appearsIn}
-        updateFavourite={updateFavourite}
+        character={character}
+        updateFavourites={updateFavourites}
         key={ i + character.name }
       /> 
     )
