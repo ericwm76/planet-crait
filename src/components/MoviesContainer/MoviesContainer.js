@@ -5,7 +5,6 @@ import Movie from '../Movie/Movie'
 import SideBar from '../SideBar/SideBar';
 
 const MoviesContainer = ({selectMovie, name, quote, rank}) => {
-  console.log(selectMovie);
   const movieCards = initialMovies.map(movie => {
       return (<Movie 
         key={movie.episode_id} 
