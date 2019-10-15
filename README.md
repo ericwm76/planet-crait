@@ -3,8 +3,8 @@
 ...
 
 ## Created by:
-[Amanda Consuelo Sierra](https://github.com/Asilo5),
-[Eric Meldrum](https://github.com/ericwm76)
+- [Amanda Consuelo Sierra](https://github.com/Asilo5)
+- [Eric Meldrum](https://github.com/ericwm76)
 
 ## View Planet Crait locally in your computer
 
@@ -16,6 +16,7 @@ To open the app on your web server run ``` $ npm start ```
 
 Planet Crait was built using:
   - React
+  - Router
   - Jest
   - Enzyme
   
