@@ -5,7 +5,7 @@ import './Character.scss';
 const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, favorited }) => {
   const films = appearsIn.map(film => {
     return (
-      <p key={Date.now()}>{film}</p>
+      <p key={Math.random()}>{film}</p>
     )
   })
     

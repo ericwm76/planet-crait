@@ -4,7 +4,7 @@ import Character from '../Character/Character';
 import SideBar from '../SideBar/SideBar';
 import ScrollText from '../ScrollText/ScrollText';
 
-const CharactersContainer = ({ characters, charactersPresent, selectMovie }) => {
+const CharactersContainer = ({ characters, charactersPresent, movie }) => {
   const characterCards = characters.map((character, i) => {
     return (
       <Character
@@ -22,7 +22,7 @@ const CharactersContainer = ({ characters, charactersPresent, selectMovie }) => 
   return (
     <section className='character-container'>
       <SideBar />
-      {!charactersPresent && <ScrollText movie={selectMovie}/>}
+      {!charactersPresent && <ScrollText movie={movie}/>}
       {charactersPresent && <div>{characterCards}</div>}
     </section> 
   )
