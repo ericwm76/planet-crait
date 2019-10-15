@@ -3,9 +3,9 @@ import './CharactersContainer.scss';
 import Character from '../Character/Character';
 import SideBar from '../SideBar/SideBar';
 import ScrollText from '../ScrollText/ScrollText';
+import PropTypes from 'prop-types';
 
-const CharactersContainer = ({ characters, charactersPresent, movie ,updateFavourite}) => {
-  console.log(movie)
+const CharactersContainer = ({ characters, charactersPresent, movie, updateFavourite }) => {
   const characterCards = characters.map((character, i) => {
     return (
       <Character
@@ -30,3 +30,12 @@ const CharactersContainer = ({ characters, charactersPresent, movie ,updateFavou
 }
 
 export default CharactersContainer;
+
+CharactersContainer.propTypes = {
+  movie: PropTypes.object,
+  charactersPresent: PropTypes.bool, 
+  characters: PropTypes.array,
+  name: PropTypes.string,
+  quote: PropTypes.string,
+  rank: PropTypes.string
+}

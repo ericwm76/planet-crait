@@ -26,19 +26,29 @@ exports[`Character should match snapshot with all data passed in correctly 1`] =
     <p>
       Appears in: 
     </p>
-    <p>
+    <p
+      key="0.3904380039043416"
+    >
       The Empire Strikes Back
     </p>
-    <p>
+    <p
+      key="0.892166240327142"
+    >
       Return of the Jedi
     </p>
-    <p>
+    <p
+      key="0.11621744667094269"
+    >
       A New Hope
     </p>
-    <p>
+    <p
+      key="0.1310260110476229"
+    >
       Revenge of the Sith
     </p>
-    <p>
+    <p
+      key="0.9969371275471783"
+    >
       The Force Awakens
     </p>
   </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Character.scss';
-
+import PropTypes from 'prop-types';
 
 const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, updateFavourite }) => {
   const films = appearsIn.map((film, i) => {
     return (
-      <p key={i}>{film}</p>
+      <p key={Math.random()}>{film}</p>
     )
   })
     
@@ -31,3 +31,12 @@ const Character = ({ name, species, homeworldName, homeworldPop, appearsIn, upda
 }
 
 export default Character;
+
+Character.propTypes = { 
+  name: PropTypes.string, 
+  species: PropTypes.string, 
+  homeworldName: PropTypes.string, 
+  homeworldPop: PropTypes.string, 
+  appearsIn: PropTypes.array, 
+  favorited: PropTypes.bool 
+}
