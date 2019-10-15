@@ -3,6 +3,7 @@ $novice-color : blue;
 $intermediate-color : green;
 $expert-color : purple;
 $hover-text-color: white;
+$hover-text-color-2: black;
 $landing-form-color: #ffffffa6;
 $disable-text: gray;
 
@@ -56,10 +57,19 @@ $disable-text: gray;
   &:hover {
     background: $crait-color;
     color: $hover-text-color;
+    background-color: rgb(246, 78, 78);
+    cursor: pointer;
+    box-shadow: 
+      0 0 20px 5px rgb(245, 68, 68),  
+      0 0 35px 15px #e00202, 
+      0 0 55px 25px rgb(187, 26, 26); 
+    border: none;
+    font-weight: bold;
   }
   &:disabled {
     background: $landing-form-color;
     color: $disable-text;
+    box-shadow: none;
   }
 }
 
@@ -70,14 +80,41 @@ $disable-text: gray;
 
 .novice-btn:hover {
   background: $novice-color;
+  background-color: rgb(176, 196, 243);
+    cursor: pointer;
+    box-shadow: 
+      0 0 20px 5px rgb(70, 67, 233),  
+      0 0 35px 15px blue, 
+      0 0 55px 25px rgb(44, 98, 245);
+    border: none;
+    color: $hover-text-color-2;
+    font-weight: bold;
 }
 
 .intermediate-btn:hover {
     background: $intermediate-color;
+    background-color: #EAFCEB;
+    cursor: pointer;
+    box-shadow: 
+      0 0 20px 5px #EAFCEB,  
+      0 0 35px 15px #337F23, 
+      0 0 55px 25px #69A267; 
+    border: none;
+    color: $hover-text-color-2;
+    font-weight: bold;
   }
 
 .expert-btn:hover {
     background: $expert-color;
+    background-color: rgb(205, 163, 245);
+    cursor: pointer;
+    box-shadow: 
+      0 0 20px 5px rgb(141, 48, 228),  
+      0 0 35px 15px #330033, 
+      0 0 55px 25px rgb(71, 19, 114); 
+    border: none;
+    color: $hover-text-color-2;
+    font-weight: bold;
   }
 
 .welcome-crait {
