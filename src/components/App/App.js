@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { Route, Nav} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { getMovieData, getCharacters } from '../../apiCalls';
 import sampleCharacters from '../../SampleCharacterData'
 
@@ -19,8 +19,8 @@ class App extends Component {
        name: '',
        quote: '',
        rank: '',
-       moviePresent: false,
-       charactersPresent: false
+       charactersPresent: false,
+       favourite: []
     }
   }
 
@@ -43,9 +43,16 @@ class App extends Component {
     })
   }
 
+  updateFavourite = (card) => {
+    //  let updatedFavourite = this.state.favourite.push(card);
+
+    //  this.setState({ favourite : updatedFavourite});
+
+    console.log('hello')
+  }
+
   render() {
-    console.log(this.state.movie)
-    // console.log(this.state.charactersPresent)
+    console.log(this.state.movie.opening_crawl)
     return (
       <main className="App">
         <Route exact path='/' render={() => <LandingPage setUsers={this.setUsers} />} />
@@ -53,7 +60,6 @@ class App extends Component {
         <Route exact path='/movies/:id' render={() => <CharactersContainer movie={this.state.movie} charactersPresent={this.state.charactersPresent} characters={this.state.characters} name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
         <Route exact path='/favourites' render={() => <FavouritesContainer name={this.state.name} quote={this.state.quote} rank={this.state.rank}/>} />
         
-        {/* {!this.state.charactersPresent && <ScrollText movie={this.state.movie}/>} */}
       </main>
     );
   }

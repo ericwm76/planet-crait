@@ -2,7 +2,7 @@ $crait-color : #c0392b;
 $background-color : #faebd745;
  
 .fa-jedi {
-  color: black;
+  color: gray;
 }
 
 .character {
@@ -14,6 +14,10 @@ $background-color : #faebd745;
   margin: 10px;
   padding: 10px;
   width: 250px;
+  overflow: scroll;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
   &:hover {
     background-color: #EAFCEB; 
     box-shadow: 
@@ -21,5 +25,11 @@ $background-color : #faebd745;
       0 0 35px 15px #337F23, /* middle magenta */
       0 0 55px 25px #69A267; /* outer cyan */
     border: none;
+  }
+  p {
+    
+  }
+  h2 {
+    color: #3a4033;
   }
  }
